@@ -252,7 +252,7 @@ MonoBehaviour:
   rb: {fileID: 388480889}
   bouncerate: 5
   speed: 3
-  flor: {fileID: 2660005277873338155, guid: 65b98e06705b04645921c0bcdeb90447, type: 3}
+  flor: {fileID: 4616692600366573672, guid: f63cdca71572687488f6db483eb59724, type: 3}
   spawnpoint: {x: 0, y: 0, z: 0}
   score: {fileID: 1041523278}
 --- !u!114 &388480895

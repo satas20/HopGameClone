@@ -26,17 +26,26 @@ public class Bouncer : MonoBehaviour
         spawn();
         spawn();
         spawn();
+        spawn();
+        rb.useGravity = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         score.text = puan.ToString();
-        transform.position += new Vector3(0, 0, speed) * Time.deltaTime ;
-       // rb.velocity = new Vector3(0, rb.velocity.y, speed);
+        if (BallMove.started) 
+        {
+            transform.position += new Vector3(0, 0, speed) * Time.deltaTime;
+            rb.useGravity = true;
+
+        }
+        // rb.velocity = new Vector3(0, rb.velocity.y, speed);
         time += Time.deltaTime;
-       
-        
+        if (Time.timeScale < 4) {
+            Time.timeScale += 0.05f * Time.deltaTime;
+        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -50,6 +59,7 @@ public class Bouncer : MonoBehaviour
         rb.velocity=new Vector3(0, bouncerate, 0);
         puan++;
         
+
 
         spawn();
 
