@@ -53,7 +53,7 @@ public class Bouncer : MonoBehaviour
         // rb.velocity = new Vector3(0, rb.velocity.y, speed);
         time += Time.deltaTime;
         if (Time.timeScale < 4  ) {
-            Time.timeScale += 0.05f * Time.deltaTime;
+            Time.timeScale += 0.03f * Time.deltaTime;
         }
         if (transform.position.y < -2) 
         {
