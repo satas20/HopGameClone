@@ -22,7 +22,7 @@ public class BallMove : MonoBehaviour
         if (Input.GetMouseButton(0)&&started)
         {
             
-            transform.position += new Vector3(Input.GetAxis("Mouse X"), 0, 0)/3;
+            transform.position += new Vector3(Input.GetAxis("Mouse X"), 0, 0)/10;
             
             rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z);
 
